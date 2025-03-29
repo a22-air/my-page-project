@@ -3,9 +3,7 @@ import { Desktop, RocketLaunch, PencilRuler, PersonArmsSpread } from "@phosphor-
 
 export default function Page() {
   return (
-    <div className="p-16 bg-gray-100">
-      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Skills</h1>
-
+    <div className="p-16 bg-white">
       {/* プログラミング言語 */}
       <div className="mb-6 text-1xl">
         <h2 className="text-2xl font-bold text-gray-800 mb-2 flex"><span className="pr-2"><Desktop size={32} color="#0d0c0d" /></span>プログラミング言語</h2>
