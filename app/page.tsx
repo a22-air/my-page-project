@@ -15,7 +15,7 @@ export default function Home() {
         className="absolute top-0 right-0 w-full h-[600px] object-cover object-right flex items-center justify-center -z-10"
       />
     </section>
-    <section className="flex items-center bg-white p-[24px_40px] grow">
+    <section className="flex items-center bg-white p-16 grow">
       <p className="text-lg text-gray-700">
         プログラマー歴2年。Swiftを中心に、iOSアプリ開発やWeb技術を学びながら、より使いやすいアプリケーションの開発を目指しています。<br></br>現在は ドライブレコーダーアプリの保守・試験・調査 に携わり、コードの品質向上や新しい技術の習得に取り組んでいます。iOS開発だけでなく、JavaScriptやReact、Next.jsなどのフロントエンド技術にも対応可能です。これまでの経験を活かしながら、より幅広い技術スタックを身につけ、ユーザーにとって価値のあるプロダクトを作ることを目標にしています。
       </p>
