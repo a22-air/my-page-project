@@ -5,21 +5,39 @@ const projects = [
   {
     id: "weather",
     title: "🌤 天気アプリ",
-    description: "現在地の天気情報をリアルタイムに取得できるiOSアプリ。",
-    tech: ["Swift", "UIKit", "OpenWeatherMap API"],
+    description: "都道府県の天気情報をリアルタイムに取得できるiOSアプリ。",
+    tech: ["Swift", "Storyboard", "OpenWeatherMap API", "Realm Swift"],
+    slide: "/slides/weather_app.pdf",
+    git: "https://github.com/a22-air/weather-app-swift",
+    movie: "https://youtube.com/shorts/r9Twrn5rgJs?feature=share",
   },
   {
     id: "todo",
     title: "📝 ToDoアプリ",
     description: "タスク管理ができるシンプルなiOSアプリ。",
-    tech: ["Swift", "SwiftUI", "RealmSwift"],
+    tech: ["React", "ReactNative","TypeScript"],
+    slide: "/slides/todolist_app.pdf",
+    git: "https://github.com/a22-air/my-todolist-project",
+    movie: "https://youtu.be/i1KVkIGmQzc"
   },
   {
     id: "job",
     title: "💼 現在の仕事",
     description: "ドライブレコーダーアプリの保守・調査を担当。",
-    tech: ["Swift", "調査・試験", "障害対応"],
+    tech: ["Swift", "調査・試験"],
+    slide: "",
+    git: "",
+    movie: "",
   },
+  {
+    id: "past work",
+    title: "過去の仕事",
+    description: "Webサイトの改修",
+    tech: ["JavaScript","jQuery"],
+    slide: "",
+    git: "",
+    movie: "",
+  }
 ];
 
 export default function Page() {
@@ -51,6 +69,23 @@ export default function Page() {
                   <li key={tech}>✅ {tech}</li>
                 ))}
               </ul>
+              {project.slide !== "" && (
+              <div>
+                <a href={project.slide} target="_blank" rel="noopener noreferrer">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                  スライドを見る（別タブで開きます）
+                </button>
+                </a>
+                <a href={project.git} target="_blank" rel="noopener noreferrer" className="p-5">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                GitHubでコードを見る（別タブで開きます）</button>
+                </a>
+                <a href={project.movie} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                  YouTubeで動画を見る（別タブで開きます）</button>
+                </a>
+              </div>
+              )}
             </div>
           )
       )}
