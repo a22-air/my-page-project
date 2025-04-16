@@ -24,7 +24,6 @@ export default function ContactForm() {
   }
   return (
     <div className="py-16 px-48 bg-white rounded-2xl shadow-md text-black">
-      <h2 className="text-2xl font-bold text-center">お問い合わせフォーム</h2>
       <form action={formAction} method="POST" className="space-y-4">
         <div className="flex space-x-4">
           <div className="w-1/2">
