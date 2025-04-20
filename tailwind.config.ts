@@ -14,7 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        "kaisei-decol": ["Kaisei Decol", "serif"], // 修正: カンマを追加
+        "noto-sans": ["Noto Sans JP", "sans-serif"],
+        "cormorant-garamond": ["Cormorant Garamond", "serif"],
       },
     },
   },

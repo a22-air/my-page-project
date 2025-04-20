@@ -1,7 +1,7 @@
 "use client";
 
 import { createContactData } from "@/app/_actions/contact";
-import { useFormState } from "react-dom";
+import { useActionState } from "react";
 
 const initialState = {
   status: "",
@@ -9,11 +9,11 @@ const initialState = {
 };
 
 export default function ContactForm() {
-  const [state, formAction] = useFormState(createContactData, initialState);
+  const [state, formAction] = useActionState(createContactData, initialState);
   console.log(state);
   if (state.status === "success") {
     return (
-      <div className="flex items-center justify-center bg-white p-8 h-80">
+      <div className="flex items-center justify-center p-8 h-80">
         <p className="bg-gray-100 text-black text-center p-8 rounded-xl w-full max-w-xl">
           お問い合わせいただき、ありがとうございます。
           <br />
@@ -23,7 +23,7 @@ export default function ContactForm() {
     );
   }
   return (
-    <div className="py-16 px-48 bg-white rounded-2xl shadow-md text-black">
+    <div className="py-16 px-48  rounded-2xl">
       <form action={formAction} method="POST" className="space-y-4">
         <div className="flex space-x-4">
           <div className="w-1/2">
@@ -78,7 +78,7 @@ export default function ContactForm() {
         <div className="text-center">
           <button
             type="submit"
-            className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            className="mt-4 px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-[rgb(91,209,215)] transition-colors"
           >送信する
           </button>
         </div>

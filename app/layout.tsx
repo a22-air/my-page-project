@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="font-kaisei-decol flex flex-col min-h-screen justify-between">
+      <body className="font-noto-sans flex flex-col min-h-screen justify-between bg-[rgb(91,209,215)]">
         <Header />
         {children}
         <Footer />

@@ -1,22 +1,20 @@
 // "use client";
 import React from 'react';
 import { getSkillsList } from '@/app/_libs/microcms';
-import { Desktop, RocketLaunch, PencilRuler, PersonArmsSpread } from "@phosphor-icons/react";
+import { PiFlowerTulip } from "react-icons/pi";
 
 export default async function Page() {
   const data = await getSkillsList();
   return (
-    <section className="p-16 bg-white text-black">
+    <section className="p-16">
       <dl>
         {data.contents.map((article) => (
           <React.Fragment key={article.id}>
-            <dt className="text-2xl font-bold text-gray-800 mb-2 flex">
-               {/* アイコンを読み込むと遅いので後で修正 */}
-            {/* <span className="pr-2"><Desktop size={32} color="#0d0c0d" /></span> */}
+            <dt className="text-2xl font-bold flex border-b">
               {article.category}
             </dt>
-              <div className="flex mb-6">
-              {article.category !== "開発経験 & 強み" ? (
+              <div className="flex pt-10 pb-20 pl-10">
+              {article.category !== "開発経験" ? (
                 // <dd>で表示
                 article.skillitemlist.map((item, index) => (
                   <React.Fragment key={index}>
@@ -26,9 +24,14 @@ export default async function Page() {
                 ))
               ) : (
                 // 開発経験&強みは<li>で表示
-                <ul>
+                <ul className="flex flex-col gap-4">
                   {article.skillitemlist.map((item, index) => (
-                    <li key={index}>・{item.name}</li>
+                    <React.Fragment key={index}>
+                    <div className="flex gap-4">
+                      <PiFlowerTulip className="mt-1 shrink-0" />
+                      <li>{item.name}</li>
+                    </div>
+                    </React.Fragment>
                   ))}
                 </ul>
               )}
