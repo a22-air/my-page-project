@@ -24,7 +24,7 @@ export default function ContactForm() {
   }
   return (
     <div className="py-16 px-48  rounded-2xl">
-      <form action={formAction} method="POST" className="space-y-4">
+      <form action={formAction} className="space-y-4">
         <div className="flex space-x-4">
           <div className="w-1/2">
             <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">姓</label>

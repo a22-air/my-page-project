@@ -32,3 +32,35 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles/globals.css */
+
+/* アニメーションの定義 */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* 初期位置（右にスライドしている） */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* 最終位置（通常位置） */
+  }
+}
+
+/* 必要なスタイルやアニメーションを追加 */
+/* styles/globals.css */
+
+/* 遅い回転アニメーションを定義 */
+@keyframes slowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 遅い回転速度を設定 */
+.slow-spin {
+  animation: slowSpin 9s linear infinite; /* 9秒で1回転 */
+}

@@ -8,15 +8,16 @@ export default function Home() {
     <section className="relative flex text-white pt-[100px] h-screen">
       <div className="relative px-10 w-full h-full">
         <div className="flex">
-          <IoMdFlower className="text-[150px] flex-1 my-20"/>
+          <IoMdFlower className="text-[150px] flex-1 my-20 slow-spin"/>
           <Image
             src="/me.png"
             alt=""
             width={500}
             height={500}
             className="object-cover ml-auto mt-6 mx-auto flex-[2]"
+            priority
             />
-            <IoMdFlower className="text-[100px] flex-1"/>
+            <IoMdFlower className="text-[100px] flex-1 slow-spin"/>
           </div>
           <div className="flex absolute bottom-0 w-full justify-between pr-10">
             <div>
@@ -24,7 +25,7 @@ export default function Home() {
                 <h1 className="px-10 text-6xl font-bold text-white ml-auto">iOS & Web Developer</h1>
             </div>
             <div className="">
-              <IoMdFlower className="text-[200px]"/>
+              <IoMdFlower className="text-[200px] slow-spin"/>
             </div>
           </div>
       </div>

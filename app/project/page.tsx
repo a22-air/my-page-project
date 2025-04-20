@@ -68,55 +68,59 @@ export default function Page() {
               <IoIosArrowForward className="ml-2" />
             </button>
           ))}
+          </div>
         </div>
-      </div>
-
-      {projects.map(
-        (project) =>
-          activeTab === project.id && (
-            <div key={project.no} className="flex">
-
-              <div key={project.id} className="w-1/2  border-r">
-                <h3 className="text-2xl font-bold border-b pb-10 text-center">{project.title}</h3>
-                <p className="p-5">{project.description}</p>
-                <ul className="pl-6 space-y-4">
-                  {project.tech.map((tech) => (
-                    <div key={tech} className="flex gap-4">
-                      <PiFlowerTulip className="mt-1 shrink-0" />
-                      <li> {tech}</li>
-                    </div>
-                ))}
-                </ul>
+        
+          {projects.map((project) => activeTab === project.id && (
+            <div
+              key={project.no}
+              className="flex transition-all duration-500 transform ease-in-out opacity-0 translate-x-10"
+              style={{animation: activeTab === project.id ? 'slideIn 1.5s forwards' : 'none'}}
+            >
+            <div key={project.id} className="w-1/2 border-r">
+              <h3 className="text-2xl font-bold border-b pb-10 text-center">
+                {project.title}
+              </h3>
+              <p className="p-5">{project.description}</p>
+              <ul className="pl-6 space-y-4">
+                {project.tech.map((tech) => (
+                  <div key={tech} className="flex gap-4">
+                    <PiFlowerTulip className="mt-1 shrink-0" />
+                    <li> {tech}</li>
+                  </div>
+                ))
+          }
+              </ul>
+            </div>
+              
+            {project.slide !== "" && (
+              <div className="w-1/2">
+                <h3 className="text-2xl font-bold border-b pb-10 text-center">Check</h3>
+                <div className="flex flex-col space-y-6 p-4">
+                  <a
+                    href={project.slide}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
+                    スライドを見る<IoIosArrowForward />
+                  </a>
+                  <a 
+                    href={project.git}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
+                    GitHubでコードを見る<IoIosArrowForward />
+                  </a>
+                  <a
+                    href={project.movie}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
+                    YouTubeで動画を見る<IoIosArrowForward />
+                  </a>
+                </div>
               </div>
               
-              {project.slide !== "" && (
-                <div className="w-1/2">
-                  <h3 className="text-2xl font-bold border-b pb-10 text-center">Check</h3>
-                  <div className="flex flex-col space-y-6 p-4">
-                    <a
-                      href={project.slide}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
-                      スライドを見る<IoIosArrowForward />
-                    </a>
-                    <a 
-                      href={project.git}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
-                      GitHubでコードを見る<IoIosArrowForward />
-                    </a>
-                    <a
-                      href={project.movie}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
-                      YouTubeで動画を見る<IoIosArrowForward />
-                    </a>
-                  </div>
-                </div>
-                
               )}
             </div>
           )
