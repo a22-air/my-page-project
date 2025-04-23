@@ -11,6 +11,18 @@ export type Skills = {
   }[];
 } & MicroCMSListContent;
 
+export type Projects = {
+  no: number,
+  projectId: string,
+  title: string,
+  description: string,
+  technologies: {
+    tech: string;
+  }[],
+  slide: string,
+  git: string,
+  demoMovie: string,
+} & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
@@ -28,6 +40,14 @@ const client = createClient({
 export const getSkillsList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Skills>({
     endpoint: "skills",
+    queries,
+  });
+  return listData;
+};
+
+export const getProjectsList = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Projects>({
+    endpoint: "project",
     queries,
   });
   return listData;
