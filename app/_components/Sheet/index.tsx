@@ -4,6 +4,6 @@ type Props = {
 
 export default function Sheet({ children }: Props) {
   return (
-    <div className="">{children}</div>
+    <div>{children}</div>
   )
 }

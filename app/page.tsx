@@ -24,12 +24,13 @@ export default function Home() {
                 <h1 className="text-6xl font-bold text-white mb-4">SAWADA AIRI</h1>
                 <h1 className="px-10 text-6xl font-bold text-white ml-auto">iOS & Web Developer</h1>
             </div>
-            <div className="">
+            <div>
               <IoMdFlower className="text-[200px] slow-spin"/>
             </div>
           </div>
       </div>
     </section>
+
     <section className="p-16 grow">
       <div className="flex items-center">
         <h1 className="text-2xl">沢田 愛利 </h1>
@@ -45,7 +46,7 @@ export default function Home() {
     <section className="px-16 pb-16">
     <h2 className="text-3xl py-10 border-y text-center">Strengths</h2>
       <ul className="space-y-4 mt-10">
-        <li className="">
+        <li>
           <div className="mb-10">
             <div className="flex gap-4 mb-4 font-bold">
               <div>01</div>
@@ -54,16 +55,16 @@ export default function Home() {
             <div>基本情報技術者試験の勉強をきっかけに、朝の学習習慣を1年半以上継続しています。資格取得後も、その時間を自己研鑽にあてて日々スキルアップに取り組んでいます。</div>
           </div>
         </li>
-        <li className="">
+        <li>
           <div className="mb-10">
             <div className="flex gap-4 mb-4 font-bold">
               <div>02</div>
-              <div className="">コミュニケーション能力</div>
+              <div>コミュニケーション能力</div>
             </div>
             <div>接客業や営業経験を通じて、相手の困りごとや要望を的確に汲み取る力を培ってきました。相手に寄り添いながら、問題解決に努めることを大切にしています。</div>
           </div>
         </li>
-        <li className="">
+        <li>
           <div className="mb-10">
             <div className="flex gap-4 mb-4 font-bold">
               <div>03</div>

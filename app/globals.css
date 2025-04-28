@@ -47,9 +47,6 @@ body {
   }
 }
 
-/* 必要なスタイルやアニメーションを追加 */
-/* styles/globals.css */
-
 /* 遅い回転アニメーションを定義 */
 @keyframes slowSpin {
   0% {

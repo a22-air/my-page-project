@@ -11,6 +11,7 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useActionState(createContactData, initialState);
   console.log(state);
+  
   if (state.status === "success") {
     return (
       <div className="flex items-center justify-center p-8 h-80">

@@ -37,7 +37,7 @@ export default function ProjectTabs({ projects }: Props) {
           onClick={() => setActiveTab(project.projectId)}
         >
           {project.title}
-          <IoIosArrowForward className="ml-2" />
+          {activeTab === project.projectId ? null :  <IoIosArrowForward className="ml-2" />}
           </button>
       ))}
       </div>

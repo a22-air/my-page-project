@@ -1,4 +1,3 @@
-// "use client";
 import React from 'react';
 import { getSkillsList } from '@/app/_libs/microcms';
 import { PiFlowerTulip } from "react-icons/pi";
