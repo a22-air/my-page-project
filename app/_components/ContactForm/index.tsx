@@ -11,7 +11,7 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useActionState(createContactData, initialState);
   console.log(state);
-  
+
   if (state.status === "success") {
     return (
       <div className="flex items-center justify-center p-8 h-80">
@@ -24,11 +24,11 @@ export default function ContactForm() {
     );
   }
   return (
-    <div className="py-16 px-48  rounded-2xl">
+    <div className="py-16 px-48  rounded-2xl text-black">
       <form action={formAction} className="space-y-4">
         <div className="flex space-x-4">
           <div className="w-1/2">
-            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">姓</label>
+            <label htmlFor="lastName" className="block text-sm font-medium">姓</label>
             <input
               type="text"
               id="lastName"
@@ -38,7 +38,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="w-1/2">
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">名</label>
+            <label htmlFor="firstName" className="block text-sm font-medium">名</label>
             <input
               type="text"
               id="firstName"
@@ -49,16 +49,17 @@ export default function ContactForm() {
           </div>
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700">会社名</label>
+          <label htmlFor="company" className="block text-sm font-medium">会社名</label>
           <input
             type="text"
             id="company"
             name="company"
+            required
             className="mt-1 block w-full rounded-lg border border-gray-300 p-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">メールアドレス</label>
+          <label htmlFor="email" className="block text-sm font-medium">メールアドレス</label>
           <input
             type="email"
             id="email"
@@ -68,7 +69,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">メッセージ</label>
+          <label htmlFor="message" className="block text-sm font-medium">メッセージ</label>
           <textarea
             id="message"
             name="message"

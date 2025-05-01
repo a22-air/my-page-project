@@ -29,7 +29,7 @@ export default function ProjectTabs({ projects }: Props) {
         {projects.map((project) => (
           <button
             key={project.projectId}
-            className={`flex items-center justify-center px-4 py-2 flex-1 transition-all duration-300 ${
+            className={`flex items-center justify-center px-4 py-2 flex-1 transition-all duration-300 cursor-pointer ${
               activeTab === project.projectId
                 ? "border-b-4 border-black text-black"
                 : "text-white hover:opacity-70"
@@ -83,13 +83,13 @@ export default function ProjectTabs({ projects }: Props) {
                 className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
                 GitHubでコードを見る<IoIosArrowForward />
               </a>
-              <a
+              {project.demoMovie && (<a
                 href={project.demoMovie}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-black py-2 px-4 rounded text-center w-fit">
                 YouTubeで動画を見る<IoIosArrowForward />
-              </a>
+              </a>)}
             </div>
           </div>
           )} 
